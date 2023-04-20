@@ -1,0 +1,13 @@
+name: scanpy_r
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.9
+  - r-base
+  - scanpy=1.9
+  - numpy<1.24
+  - matplotlib<3.7
+  - r-biocmanager
+  - ipykernel
+  - r-irkernel

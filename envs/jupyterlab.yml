@@ -1,0 +1,11 @@
+name: jupyterlab
+channels:
+  - conda-forge
+dependencies:
+  - python<=3.9
+  - jupyterlab
+  - ipykernel
+  - nb_conda
+  - nb_conda_kernels
+  - nbconvert
+  - nbdime
