@@ -1,4 +1,4 @@
-name: xie_env_r
+name: scbp_r
 channels:
   - conda-forge
   - bioconda
@@ -18,7 +18,7 @@ dependencies:
   - scikit-learn
   - openpyxl
 #  - celltypist
-  - r-rpy2
+  - rpy2
   - r-Seurat
   - bioconductor-scater
   - bioconductor-scdblfinder 
