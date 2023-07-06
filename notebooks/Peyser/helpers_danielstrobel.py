@@ -4,7 +4,7 @@ import scanpy as sc
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import scib
+import scbi
 from sklearn.linear_model import LogisticRegressionCV
 from sklearn import metrics
 
