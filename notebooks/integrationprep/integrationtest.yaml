@@ -25,18 +25,18 @@ defaults:
         dispersion: gene
         max_epochs: 10
         use_observed_lib_size: true
-      scpoli:
-        supervised:
-          - true
-          - false
-        model:
-          latent_dim: 30
-          embedding_dims: 10
+#      scpoli:
+#        supervised:
+#          - true
+#          - false
+#        model:
+#          latent_dim: 30
+#          embedding_dims: 10
           # hidden_layer_sizes: [512, 512]
-          recon_loss: nb
-        train:
-          n_epochs: 50
-          eta: 10
+#          recon_loss: nb
+#        train:
+#          n_epochs: 50
+#          eta: 10
 
   metrics:
     methods:
@@ -106,5 +106,5 @@ DATASETS:
         #- lineage
     metrics:
       label: coarse_harmonized_anno
-      batch: sample
+      batch: batch
       #lineage: coarse_harmonized_anno
