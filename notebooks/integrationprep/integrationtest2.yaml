@@ -54,7 +54,7 @@ defaults:
       - pcr
       - kbet_y
   datasets:
-    - integration_ready_data
+    - integration_ready_data_small
     #- blood_benchmark
     # - blood_benchmark_donor
     # - test
@@ -74,9 +74,10 @@ defaults:
 
 DATASETS:
 
-  integration_ready_data:
+  integration_ready_data_small:
     input:
-      integration: /mnt/biocluster/projekte/Corona2020/ideas_leonie_pohl/tempDir/integration_ready_data.h5ad
+      integration: /mnt/biocluster/projekte/Corona2020/ideas_leonie_pohl/tempDir/integration_ready_data_small.h5ad
+      metrics: integration
       #preprocessing: subset
       #integration: preprocessing
     #subset:
