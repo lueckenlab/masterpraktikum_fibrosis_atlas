@@ -1,0 +1,16 @@
+name: milo
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.9
+  - conda-ecosystem-user-package-isolation
+  - ipykernel
+  - scanpy=1.9
+  - anndata=0.8
+  - r-base
+  - bioconductor-edger
+  - r-statmod
+  - pip
+  - pip:
+    - git+https://github.com/emdann/milopy.git
