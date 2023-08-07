@@ -40,19 +40,19 @@ defaults:
 
   metrics:
     methods:
-      - nmi_leiden_y
-      - ari_leiden_y
-      - asw_label_y
-      - asw_batch_y
+      - nmi #_leiden_y
+      - ari #_leiden_y
+      - asw_label #_y
+      - asw_batch #_y
       - cell_cycle
-      - clisi_y
-      - ilisi_y
+      - clisi #_y
+      - ilisi #_y
       - graph_connectivity
       - isolated_label_asw
-      - isolated_label_asw_y
-      - isolated_label_f1_y
+      #- isolated_label_asw #_y
+      - isolated_label_f1 #_y
       - pcr
-      - kbet_y
+      - kbe_y
   datasets:
     - integration_ready_data_small
     #- blood_benchmark
@@ -77,7 +77,7 @@ DATASETS:
   integration_ready_data_small:
     input:
       integration: /mnt/biocluster/projekte/Corona2020/ideas_leonie_pohl/tempDir/integration_ready_data_small.h5ad
-      metrics: integration
+     # metrics: integration
       #preprocessing: subset
       #integration: preprocessing
     #subset:
