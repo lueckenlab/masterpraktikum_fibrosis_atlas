@@ -1,0 +1,28 @@
+############ SCCODA Analysis Inputs ############
+# python scooda_analysis.py sccoda_analysis_input/config.yml
+
+# path of partly preprocessed HLCA file used in this notebook:
+adata_path : "/home/h/hollenberg/MaPra/datasets_seperate/Peyser.h5ad"
+
+
+# add annotation when not in adata -> "already satisfied" if annotation already in adata
+add_annotation : "already satisfied"
+
+# path to results directory: (has to exist)
+dir_out : "/home/h/hollenberg/MaPra/sccoda/"
+
+##### specify columns 
+# Cell type Annotation
+cell_type_identifier : "manual_celltype_annotation_precise" 
+# samples 
+sample_identifier : "samples" 
+# condition 
+covariate_obs : "condition"
+# Name of first condition  
+group1 : "saline"
+# Name of secound condition  
+group2 : "nintedanib"
+# reference cell type
+reference_cell_type : "automatic"
+
+
