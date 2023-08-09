@@ -31,15 +31,16 @@ covariate_obs=config['covariate_obs']
 group1 = config['group1']
 group2 = config['group2']
 reference_cell_type=config['reference_cell_type']
-fdr = config['fdr']
-lfc_thresh = config['lfc_thresh']
+fdr = 0.4
+lfc_thresh = 0.5
 dir_out = config['dir_out']
 
 adata = sc.read(adata_path)
 # load annotation if not in adata
-if add_annotation is not None:
+if add_annotation != "already satisfied":
     adata.obs = pd.read_csv(add_annotation)
-    
+
+adata = adata[adata.obs[covariate_obs].isin([group1, group2]) ]
 
 meta = adata.obs[[covariate_obs, sample_identifier]].drop_duplicates().set_index(sample_identifier)
 scc_dat = dat.from_scanpy(
