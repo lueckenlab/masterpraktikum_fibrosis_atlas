@@ -1,0 +1,33 @@
+############ SCCODA Analysis Inputs ############
+# python scooda_analysis.py config.yml
+
+# path of partly preprocessed HLCA file used in this notebook:
+adata_path : "/home/h/hollenberg/MaPra/adata_radiation_processed.h5ad"
+
+# add annotation when not in adata -> None if annotation already in adata
+add_annotation : "/home/h/hollenberg/MaPra/radiation_obs_annotation.csv"
+
+# path to results directory: (has to exist)
+dir_out : "/home/h/hollenberg/MaPra/sccoda/"
+
+# False discovery rate
+fdr : 0.4
+
+# Threshold for the log2 fold change 
+lfc_thresh : 0.5
+
+##### specify columns 
+# Cell type Annotation
+cell_type_identifier : "annotation" 
+# samples 
+sample_identifier : "SAMP_ID" 
+# condition 
+covariate_obs : "SAMP_condition"
+# Name of first condition  
+group1 : "RAD"
+# Name of secound condition  
+group2 : "SHAM"
+# reference cell type
+reference_cell_type : "automatic"
+
+
