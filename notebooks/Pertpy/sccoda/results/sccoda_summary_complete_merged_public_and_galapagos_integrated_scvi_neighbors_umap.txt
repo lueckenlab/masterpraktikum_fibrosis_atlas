@@ -1,0 +1,43 @@
+None
+Covariate          Cell Type                
+label[T.fibrotic]  AT1                           True
+                   AT1/2                         True
+                   AT2                           True
+                   Adventitial fibroblasts      False
+                   Aerocytes                    False
+                   Alveolar macrophages          True
+                   B-cells                       True
+                   CD4 T-cells                  False
+                   CD8 T-cells                   True
+                   Classical monocytes          False
+                   Dendritic cells               True
+                   Endothelial                  False
+                   Epithelial                   False
+                   Erythroid cells              False
+                   Fibroblasts                  False
+                   Granulocytes                 False
+                   Interstitial macrophages      True
+                   Monocytes                    False
+                   NA                           False
+                   NK cells                      True
+                   Neutrophils                   True
+                   Non-classical monocytes      False
+                   Peribronchial fibroblasts    False
+                   Regulatory T-cells           False
+                   SMCs                         False
+                   T-cells                       True
+                   Transitioning epithelial      True
+Name: Final Parameter, dtype: bool
+                  Cell Type  Final Parameter  HDI 3%  ...  Inclusion probability  Expected Sample  log2-fold change
+5  Interstitial macrophages         0.740936   0.511  ...               1.000000       420.371537          0.996802
+4           Dendritic cells         0.322137   0.092  ...               0.971067       332.733122          0.392604
+8                   T-cells         0.192474  -0.029  ...               0.578067       287.343117          0.205539
+3               CD8 T-cells        -0.030955  -0.280  ...               0.409867        50.716333         -0.116801
+6                  NK cells        -0.094813  -0.353  ...               0.453267       106.207089         -0.208927
+1      Alveolar macrophages        -0.098920  -0.323  ...               0.444733       176.317065         -0.214852
+7               Neutrophils        -0.130645  -0.370  ...               0.492800       132.232113         -0.260622
+0                       AT2        -0.178760  -0.447  ...               0.507733        57.480352         -0.330038
+9  Transitioning epithelial        -0.217787  -0.455  ...               0.637067        70.768638         -0.386343
+2                   B-cells        -0.384570  -0.613  ...               0.988000       293.135159         -0.626958
+
+[10 rows x 8 columns]
