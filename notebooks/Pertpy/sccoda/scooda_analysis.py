@@ -101,7 +101,7 @@ def run_analysis(config_file, fdr =0.4, lfc_thresh = 0.1):
         with PdfPages(os.path.join(dir_out, "sccoda_" + adata_path.split("/")[-1].split(".")[0] + ".pdf")) as pdf:
     
             plt.rcParams['figure.figsize'] = (16, 10)
-            pt.pl.coda.boxplots(sccoda_data, modality_key=group1_group2, feature_name=covariate_obs, add_dots=True)
+            pt.pl.coda.boxplots(sccoda_data, modality_key=group1_group2, feature_name=covariate_obs, add_dots=False)
             pdf.savefig(bbox_inches='tight')
             plt.close()
     
