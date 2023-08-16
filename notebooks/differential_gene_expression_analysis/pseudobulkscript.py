@@ -58,6 +58,10 @@ def aggregate_and_filter(
 
 adata = sc.read("/lustre/groups/ml01/workspace/daniel.michaela.masterpraktikum23/all_datasets_merged/complete_merged_public_and_galapagos_integrated_scvi_neighbors_umap_withfinalanno_zwischenstand.h5ad")
 
+obs_to_keep = ["dataset", "batch", "sample", "condition", "condition_2", "fibrotic/control",
+               "coarse_harmonized_anno", "harmonized_anno", "final_annotation"]   # obs columns that we want to keep
+print("adata was read")
+
 # process first cell type separately...
 cell_type = adata.obs["final_annotation"].cat.categories[0]
 print(
@@ -71,31 +75,39 @@ for i, cell_type in enumerate(adata.obs["final_annotation"].cat.categories[1:]):
     adata_cell_type = aggregate_and_filter(adata, cell_type, obs_to_keep=obs_to_keep)
     adata_pb = anndata.concat([adata_pb, adata_cell_type])   # --> adata_pb.concatenate(adata_cell_type) does not work!
 
-
+print("processing ended, now doing normalisation")
 adata_pb.layers['counts'] = adata_pb.X.copy()
 
 sc.pp.normalize_total(adata_pb, target_sum=1e6)
 sc.pp.log1p(adata_pb)
 sc.pp.pca(adata_pb)
 
+print("normalization ended, now doing something with lib size")
+
 adata_pb.obs["lib_size"] = np.sum(adata_pb.layers["counts"], axis=1)
 adata_pb.obs["lib_size"] = adata_pb.obs["lib_size"].astype(float)   # --> not in example but important
 adata_pb.obs["log_lib_size"] = np.log(adata_pb.obs["lib_size"])
+
+print ("plotting pca and saving it (hopefully)")
 
 pcafig = sc.pl.pca(adata_pb, color=["dataset", "batch", "sample", "condition", "condition_2", "fibrotic/control",
                            "coarse_harmonized_anno",], ncols=1, size=200, show=False)
 pcafig.savefig("/lustre/groups/ml01/workspace/daniel.michaela.masterpraktikum23/masterpraktikum_fibrosis_atlas/notebooks/differential_gene_expression_analysis/outputfigs/pcafigures.png")
 
 adata_pb.X = adata_pb.layers['counts'].copy()
-print(np.max(adata_pb.X)   # check if .X contains raw counts
+print(np.max(adata_pb.X))   # check if .X contains raw counts
+
+print("plot sum of raw counts")
 
 column_sums = np.sum(adata_pb.X, axis=1)
 plt.hist(column_sums, bins=90)   # plot the sums of the raw counts as a sanity check
 plt.gca().set(title='Pseudobulk - raw counts histogram', ylabel='Frequency')
 plt.savefig("/lustre/groups/ml01/workspace/daniel.michaela.masterpraktikum23/masterpraktikum_fibrosis_atlas/notebooks/differential_gene_expression_analysis/outputfigs/raw_counts_histogram_pseudobulk.png", dpi = 600)
 
+print("adata X conversion and saving adata")
 # very important conversions as adata_pb.write() does not work otherwise 
 adata_pb.X = np.vstack(adata_pb.X[:, :]).astype(float)
 adata_pb.layers['counts'] = np.vstack(adata_pb.layers['counts'][:, :]).astype(float)
 
 adata_pb.write("/lustre/groups/ml01/workspace/daniel.michaela.masterpraktikum23/all_datasets_merged/pseudobulk_merged_data_for_diffEx_edgeR_condition-2_withoutSchiller_finalanno.h5ad")
+print("everything worked :)")
