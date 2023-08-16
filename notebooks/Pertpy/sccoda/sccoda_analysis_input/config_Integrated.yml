@@ -6,7 +6,7 @@ adata_path : "/lustre/groups/ml01/workspace/daniel.michaela.masterpraktikum23/al
 #"/lustre/groups/ml01/workspace/daniel.michaela.masterpraktikum23/all_datasets_merged/complete_merged_public_and_galapagos_integrated_scvi_neighbors_umap.h5ad"
 
 # path to results directory: (has to exist)
-dir_out : "/home/icb/leonie.pohl/masterpraktikum_fibrosis_atlas/notebooks/Pertpy/sccoda/results/"
+dir_out : "/lustre/groups/ml01/workspace/daniel.michaela.masterpraktikum23/masterpraktikum_fibrosis_atlas/notebooks/Pertpy/sccoda/"
 
 ##### specify columns 
 # Cell type Annotation

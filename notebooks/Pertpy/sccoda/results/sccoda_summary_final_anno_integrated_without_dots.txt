@@ -1,0 +1,49 @@
+None
+Covariate          Cell Type                
+label[T.fibrotic]  AT1                           True
+                   AT2                           True
+                   Adventitial fibroblasts       True
+                   Aerocytes                     True
+                   Alveolar macrophages          True
+                   B-cells                       True
+                   Cd4 T-cells                   True
+                   Cd4+/Cd8+ T-cells             True
+                   Cd4-/Cd8- T-cells            False
+                   Cd8 T-cells                   True
+                   Classical Monocytes           True
+                   Dendritic cells               True
+                   Endothelial                   True
+                   Erythroid cells               True
+                   Fibroblasts                   True
+                   Interstitial macrophages      True
+                   Myofibroblasts                True
+                   NK cells                      True
+                   Neutrophils                   True
+                   Non-classical monocytes       True
+                   Peribronchial fibroblasts     True
+                   Pericytes                     True
+                   Platelets                     True
+                   SMCs                          True
+                   T-cells                       True
+                   Transitioning epithelial      True
+Name: Final Parameter, dtype: bool
+                   Cell Type  Final Parameter  HDI 3%  HDI 97%     SD  Inclusion probability  Expected Sample  log2-fold change
+12  Interstitial macrophages         0.706794   0.528    0.889  0.099               1.000000       391.879152          1.166527
+8            Dendritic cells         0.261399   0.053    0.451  0.116               0.947267       269.227794          0.523957
+4       Alveolar macrophages         0.105831  -0.070    0.293  0.082               0.393800       284.004525          0.299520
+10           Erythroid cells         0.088520  -0.163    0.324  0.093               0.389467        49.683816          0.274545
+6                Cd4 T-cells         0.052095  -0.086    0.264  0.061               0.327067       235.157244          0.221996
+0                        AT1         0.035808  -0.206    0.256  0.073               0.312600        54.107205          0.198498
+2    Adventitial fibroblasts         0.005178  -0.217    0.236  0.065               0.280067        63.075780          0.154308
+11               Fibroblasts        -0.014708  -0.224    0.181  0.062               0.316400       105.051589          0.125619
+17                 Platelets        -0.188076  -0.455    0.086  0.139               0.473200        30.237500         -0.124499
+13            Myofibroblasts        -0.246002  -0.515    0.019  0.165               0.654533        27.062711         -0.208068
+1                        AT2        -0.271791  -0.479    0.004  0.161               0.781933        77.739863         -0.245274
+15               Neutrophils        -0.275144  -0.492   -0.018  0.149               0.870933       106.486136         -0.250111
+7        Classical Monocytes        -0.287961  -0.515   -0.070  0.135               0.924200       116.419277         -0.268602
+14                  NK cells        -0.298462  -0.577   -0.089  0.141               0.946533       101.971846         -0.283752
+5                    B-cells        -0.320370  -0.468   -0.167  0.082               1.000000       408.621377         -0.315359
+18  Transitioning epithelial        -0.329218  -0.592   -0.074  0.165               0.894933        54.758975         -0.328123
+16   Non-classical monocytes        -0.361239  -0.594   -0.129  0.159               0.911267        84.092754         -0.374319
+3                  Aerocytes        -0.368649  -0.599   -0.122  0.138               0.975333        82.393763         -0.385011
+9                Endothelial        -0.654652  -0.837   -0.479  0.096               1.000000       229.868450         -0.797625
