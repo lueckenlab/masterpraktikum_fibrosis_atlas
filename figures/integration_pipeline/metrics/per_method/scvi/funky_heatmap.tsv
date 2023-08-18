@@ -1,0 +1,2 @@
+method	output_type	batch	label	lineage_specific	lineage_key	lineage	ari_leiden_y	Overall Score	Batch Correction	asw_batch	asw_label	cell_cycle	clisi_y	graph_connectivity	ilisi_y	kbet_y	Bio conservation	nmi_leiden_y	pcr
+scvi	embed	batch	harmonized_anno	global	None	global	0.766458921352358	0.638777468009453	0.515727695097256	0.80539830406165	0.575136706233025	0.462902233550824	0.999999995415027	0.933314359055211	0.0086265751809784	0.646297498824425	0.720810649950918	0.799555393203355	0.185001738364017
