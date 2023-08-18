@@ -1,0 +1,48 @@
+None
+Covariate          Cell Type                
+label[T.fibrotic]  AT1                           True
+                   AT2                           True
+                   Adventitial fibroblasts       True
+                   Aerocytes                     True
+                   Alveolar macrophages          True
+                   B-cells                       True
+                   Cd4 T-cells                   True
+                   Cd4+/Cd8+ T-cells             True
+                   Cd4-/Cd8- T-cells            False
+                   Cd8 T-cells                   True
+                   Classical Monocytes           True
+                   Dendritic cells               True
+                   Endothelial                   True
+                   Erythroid cells               True
+                   Fibroblasts                   True
+                   Interstitial macrophages      True
+                   Myofibroblasts                True
+                   NK cells                      True
+                   Neutrophils                   True
+                   Non-classical monocytes       True
+                   Peribronchial fibroblasts     True
+                   Pericytes                     True
+                   Platelets                     True
+                   SMCs                          True
+                   T-cells                       True
+                   Transitioning epithelial      True
+Name: Final Parameter, dtype: bool
+                   Cell Type  Final Parameter  HDI 3%  HDI 97%     SD  Inclusion probability  Expected Sample  log2-fold change
+12  Interstitial macrophages         0.711859   0.528    0.891  0.096               1.000000       391.033491          1.174746
+8            Dendritic cells         0.245071   0.060    0.458  0.129               0.895067       268.541549          0.501314
+4       Alveolar macrophages         0.107459  -0.040    0.304  0.081               0.410667       285.543173          0.302781
+10           Erythroid cells         0.078819  -0.152    0.337  0.083               0.316267        49.439676          0.261462
+6                Cd4 T-cells         0.052595  -0.107    0.241  0.051               0.243467       235.221928          0.223629
+0                        AT1         0.040560  -0.207    0.296  0.069               0.263000        53.973541          0.206266
+2    Adventitial fibroblasts         0.010755  -0.268    0.226  0.088               0.383400        63.034979          0.163267
+11               Fibroblasts        -0.000257  -0.235    0.197  0.060               0.281133       106.450214          0.147380
+13            Myofibroblasts        -0.240922  -0.505    0.017  0.164               0.680200        27.330734         -0.199827
+15               Neutrophils        -0.269870  -0.519   -0.033  0.161               0.771333       104.905920         -0.241590
+1                        AT2        -0.271054  -0.494    0.004  0.163               0.796267        77.469209         -0.243297
+7        Classical Monocytes        -0.280041  -0.525   -0.068  0.149               0.880800       115.687641         -0.256262
+14                  NK cells        -0.304703  -0.531   -0.070  0.133               0.969400       101.314685         -0.291843
+5                    B-cells        -0.323924  -0.472   -0.158  0.084               0.999200       408.711792         -0.319573
+17  Transitioning epithelial        -0.327360  -0.599   -0.087  0.160               0.901133        54.465849         -0.324531
+16   Non-classical monocytes        -0.355739  -0.592   -0.110  0.142               0.960400        85.216541         -0.365472
+3                  Aerocytes        -0.360878  -0.606   -0.131  0.131               0.985933        82.769229         -0.372886
+9                Endothelial        -0.658778  -0.850   -0.471  0.099               1.000000       229.787744         -0.802666
