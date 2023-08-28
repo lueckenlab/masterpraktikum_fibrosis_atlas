@@ -14,7 +14,10 @@ import decoupler as dc
 
 directory = sys.argv[1]
 filenames = next(walk(sys.argv[1]), (None, None, []))[2]
-#print(directory, filenames)
+print(directory, filenames)
+
+filenames = filenames[-1:] + filenames[:2]
+print(filenames)
 
 for file in filenames:
     adata = sc.read(str(directory)+"/"+file)
@@ -63,4 +66,5 @@ for file in filenames:
             return_fig=True
         )   
         fig.save("./results/"+file[:-5]+"_"+cond+"_liana.png", dpi=500, limitsize=False)
+    break
 
