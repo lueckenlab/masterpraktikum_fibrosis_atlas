@@ -16,7 +16,7 @@ directory = sys.argv[1]
 filenames = next(walk(sys.argv[1]), (None, None, []))[2]
 print(directory, filenames)
 
-filenames = filenames[-1:] + filenames[:2]
+#filenames = filenames[-1:] + filenames[:2]
 print(filenames)
 
 for file in filenames:
