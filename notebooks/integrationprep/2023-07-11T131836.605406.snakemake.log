@@ -1,0 +1,31 @@
+Config file configs/imported/outputs.yaml is extended by additional config specified via the command line.
+Config file configs/imported/load_data.yaml is extended by additional config specified via the command line.
+Config file configs/imported/exploration.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 5
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Singularity containers: ignored
+Job stats:
+job                   count    min threads    max threads
+------------------  -------  -------------  -------------
+all                       1              1              1
+common_dag                1              1              1
+common_rulegraph          1              1              1
+common_save_config        1              1              1
+total                     4              1              1
+
+Select jobs to execute...
+
+[Tue Jul 11 13:18:43 2023]
+rule common_save_config:
+    output: .snakemake/images/metrics_all/config.json
+    jobid: 2
+    reason: Missing output files: .snakemake/images/metrics_all/config.json
+    wildcards: images=images/metrics, target=all
+    resources: tmpdir=/tmp
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-07-11T131836.605406.snakemake.log
