@@ -1,0 +1,22 @@
+############ SCCODA Analysis Inputs ############
+# python scooda_analysis.py sccoda_analysis_input/config.yml
+
+# path of partly preprocessed HLCA file used in this notebook:
+adata_path : "/home/h/hollenberg/MaPra/datasets_seperate/galapagos_bleo.h5ad"
+
+# path to results directory: (has to exist)
+dir_out : "/home/h/hollenberg/MaPra/sccoda/"
+
+##### specify columns 
+# Cell type Annotation
+cell_type_identifier : "manual_celltype_annotation_fine_leiden03" 
+# samples 
+sample_identifier : "SAMP_ID" 
+# condition 
+covariate_obs : "SAMP_condition"
+# Name of first condition  
+group1 : "BLM"
+# Name of secound condition  
+group2 : "SHAM"
+# reference cell type
+reference_cell_type : "automatic"

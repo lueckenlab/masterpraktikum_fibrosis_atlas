@@ -1,0 +1,24 @@
+############ SCCODA Analysis Inputs ############
+# python scooda_analysis.py sccoda_analysis_input/config_Integrated.yml
+
+# path of partly preprocessed HLCA file used in this notebook:
+adata_path : "/lustre/groups/ml01/workspace/daniel.michaela.masterpraktikum23/all_datasets_merged/final_anno_integrated.h5ad"
+#"/lustre/groups/ml01/workspace/daniel.michaela.masterpraktikum23/all_datasets_merged/complete_merged_public_and_galapagos_integrated_scvi_neighbors_umap.h5ad"
+
+# path to results directory: (has to exist)
+dir_out : "/lustre/groups/ml01/workspace/daniel.michaela.masterpraktikum23/masterpraktikum_fibrosis_atlas/notebooks/Pertpy/sccoda/"
+
+##### specify columns 
+# Cell type Annotation
+cell_type_identifier : "final_annotation" 
+#harmonized_anno
+# samples 
+sample_identifier : "batch" 
+# condition 
+covariate_obs : "label"
+# Name of first condition  
+group1 : "fibrotic"
+# Name of secound condition  
+group2 : "control"
+# reference cell type
+reference_cell_type : "automatic"
