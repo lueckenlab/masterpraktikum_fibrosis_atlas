@@ -1,0 +1,2 @@
+method	output_type	batch	label	lineage_specific	lineage_key	lineage	ari	Overall Score	Batch Correction	asw_batch	asw_label	ilisi	isolated_label_f1	Bio conservation	nmi	pcr
+scvi	embed	batch	harmonized_anno	global	None	global	0.736896704701125	0.631707850689772	0.478885116508539	0.80185414845262	0.57400381565094	0.0623423197889452	0.831475409836066	0.73358967347726	0.79198276372091	0.572458881284053
