@@ -1,0 +1,111 @@
+defaults:
+  integration:
+    raw_counts: X
+    norm_counts: log1p_norm
+    label: coarse_harmonized_anno
+    methods:
+      unintegrated:
+      # bbknn:
+      # combat:
+      harmony:
+      scanorama:
+      scgen:
+        max_epochs: 50
+      scvi:
+        n_hidden: 128
+        dispersion:
+          - gene
+          #- gene-batch
+          #- gene-label
+          #- gene-cell
+        max_epochs: 10
+        use_observed_lib_size: true
+      scanvi:
+        n_hidden: 128
+        dispersion: gene
+        max_epochs: 10
+        use_observed_lib_size: true
+     # scpoli:
+     #   supervised:
+     #     - true
+     #     - false
+     #   model:
+     #     latent_dim: 30
+     #     embedding_dims: 10
+     #     # hidden_layer_sizes: [512, 512]
+     #     recon_loss: nb
+     #   train:
+     #     n_epochs: 50
+     #     eta: 10
+
+  metrics:
+    methods:
+      - nmi #_leiden_y
+      - ari #_leiden_y
+      - asw_label #_y
+      - asw_batch #_y
+      - cell_cycle
+      - clisi #_y
+      - ilisi #_y
+      - graph_connectivity
+      - isolated_label_asw
+      #- isolated_label_asw #_y
+      - isolated_label_f1 #_y
+      - pcr
+      - kbe_y
+  datasets:
+    - integration_ready_data_small
+    #- blood_benchmark
+    # - blood_benchmark_donor
+    # - test
+  # subset:
+  #   n_cells: 1000000
+  preprocessing:
+    raw_counts: X
+    norm_counts: log1p_norm
+    batch: batch
+    lineage: coarse_harmonized_anno
+    assemble:
+      - counts
+      - normalize
+      - highly_variable_genes
+      - pca
+      - neighbors
+
+DATASETS:
+
+  integration_ready_data_small:
+    input:
+      integration: /mnt/biocluster/projekte/Corona2020/ideas_leonie_pohl/tempDir/integration_ready_data_small.h5ad
+     # metrics: integration
+      #preprocessing: subset
+      #integration: preprocessing
+    #subset:
+    #  label: harmonized_label
+    #  sample: sample
+    #  n_cells: 10000
+    #preprocessing:
+    #  raw_counts: X
+    #  norm_counts: log1p_norm
+    #  highly_variable_genes:
+    #    n_top_genes: 3000
+    #  assemble:
+    #    - counts
+    #    - normalize
+    #    - highly_variable_genes
+    #    - pca
+    #    - neighbors
+    integration:
+      raw_counts: X
+      norm_counts: log1p_norm
+      label: coarse_harmonized_anno
+      batch: batch
+      #lineage: coarse_harmonized_anno
+      #umap_colors:
+       # - harmonized_label
+        #- donor
+        #- lineage
+    metrics:
+      label: coarse_harmonized_anno
+      batch: batch
+      #lineage: coarse_harmonized_anno
